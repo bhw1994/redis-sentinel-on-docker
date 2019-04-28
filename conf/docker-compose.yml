@@ -13,8 +13,8 @@ services:
       - REQUIREPASS=password1234
       - MASTERPORT=6379
       - CLIENTPORT=26379
-      - MASTERHOST=192.168.137.101
-      - CLIENTHOST=192.168.137.101
+      - MASTERHOST=localhost
+      - CLIENTHOST=localhost
       - QUORUM=2
       - DOWN_AFTER_MILLISEC=5000
       - FAILOVER_TIMEOUT=30000
@@ -34,8 +34,8 @@ services:
       - REQUIREPASS=password1234
       - MASTERPORT=6379
       - CLIENTPORT=26380
-      - MASTERHOST=192.168.137.101
-      - CLIENTHOST=192.168.137.101
+      - MASTERHOST=localhost
+      - CLIENTHOST=localhost
       - QUORUM=2
       - DOWN_AFTER_MILLISEC=5000
       - FAILOVER_TIMEOUT=30000
@@ -55,8 +55,8 @@ services:
       - REQUIREPASS=password1234
       - MASTERPORT=6379
       - CLIENTPORT=26381
-      - MASTERHOST=192.168.137.101
-      - CLIENTHOST=192.168.137.101
+      - MASTERHOST=localhost
+      - CLIENTHOST=localhost
       - QUORUM=2
       - DOWN_AFTER_MILLISEC=5000
       - FAILOVER_TIMEOUT=30000
