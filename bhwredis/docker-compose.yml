@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  master:
+    image: redis
+    container_name: master
+
+    volumes:
+      - ./master/redis.conf
+    ports:
+      - "6379:6379"
+
+  slave:
+    image: redis
+    container_name: slave
+    
+    volumes:
+      - ./slave/redis.conf
+    ports:
+      - "6380:6380"
+
