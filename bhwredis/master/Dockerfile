@@ -5,6 +5,6 @@ EXPOSE 80
 EXPOSE 443
 EXPOSE 6379
 
-COPY redis.conf /usr/local/etc/redis/redis.conf
-CMD [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+COPY ./redis.conf ./redis.conf
+CMD [ "redis-server", "./redis.conf" ]
 

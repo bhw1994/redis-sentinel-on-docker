@@ -8,9 +8,10 @@ services:
     ports:
       - 6379:6379
 
+    volumes:
+      - ./master/redis.conf:/redis
 
-    command: cp ./master/redis.conf /usr/local/etc/redis/redis.conf
-    command: redis-server /usr/local/etc/redis/redis.conf
+    command: redis-server /redis/redis.conf
 
   slave:
     image: redis
@@ -19,6 +20,8 @@ services:
     ports:
       - 6380:6380
 
-    command: cp ./slave/redis.conf /usr/local/etc/redis/redis.conf
-    command: redis-server /usr/local/etc/redis/redis.conf
+    volumes:
+      - ./slave/redis.conf:/redis
+
+    command: redis-server /redis/redis.conf
 
