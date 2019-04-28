@@ -20,7 +20,6 @@ services:
       - FAILOVER_TIMEOUT=30000
     volumes:
       - "../../sentinel-data/sentinel1:/redis"
-    restart: always
 
   redis-sentinel2:
     image: lgatica/redis-sentinel:4.0.2
@@ -41,7 +40,6 @@ services:
       - FAILOVER_TIMEOUT=30000
     volumes:
       - "../../sentinel-data/sentinel2:/redis"
-    restart: always
 
   redis-sentinel3:
     image: lgatica/redis-sentinel:4.0.2
@@ -62,4 +60,3 @@ services:
       - FAILOVER_TIMEOUT=30000
     volumes:
       - "../../sentinel-data/sentinel3:/redis"
-    restart: always

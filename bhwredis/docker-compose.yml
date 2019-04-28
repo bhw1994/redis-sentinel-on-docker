@@ -8,7 +8,9 @@ services:
     volumes:
       - ./master/redis.conf
     ports:
-      - "6379:6379"
+      - 6379:6379
+
+    command: redis-server ./master/redis.conf
 
   slave:
     image: redis
@@ -17,5 +19,7 @@ services:
     volumes:
       - ./slave/redis.conf
     ports:
-      - "6380:6380"
+      - 6380:6380
+
+    command: redis-server ./slave/redis.conf
 
