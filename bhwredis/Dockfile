@@ -1,8 +1,0 @@
-FROM redis
-MAINTAINER bhw1994 <bhw1994@gmail.com>
-
-CMD [ "redis-server", "/./redis.conf" ]
-
-
-EXPOSE 80
-EXPOSE 443
