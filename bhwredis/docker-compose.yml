@@ -4,22 +4,21 @@ services:
   master:
     image: redis
     container_name: master
-
-    volumes:
-      - ./master/redis.conf
+    
     ports:
       - 6379:6379
 
-    command: redis-server ./master/redis.conf
+
+    command: cp ./master/redis.conf /usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
 
   slave:
     image: redis
     container_name: slave
     
-    volumes:
-      - ./slave/redis.conf
     ports:
       - 6380:6380
 
-    command: redis-server ./slave/redis.conf
+    command: cp ./slave/redis.conf /usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
 
