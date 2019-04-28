@@ -9,7 +9,7 @@ services:
       - 6379:6379
 
     volumes:
-      - ./master/redis.conf:/redis
+      - ./master:/redis
 
     command: redis-server /redis/redis.conf
 
@@ -21,7 +21,7 @@ services:
       - 6380:6380
 
     volumes:
-      - ./slave/redis.conf:/redis
+      - ./slave:/redis
 
     command: redis-server /redis/redis.conf
 
