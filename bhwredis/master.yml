@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  master:
+    image: redis
+    container_name: master
+    
+    ports:
+      - 6379:6379
+
+    volumes:
+      - ./master:/redis
+
+    command: redis-server /redis/redis.conf
+

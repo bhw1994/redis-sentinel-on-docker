@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  slave:
+    image: redis
+    container_name: slave
+    
+    ports:
+      - 6380:6380
+
+    volumes:
+      - ./slave:/redis
+
+    command: redis-server /redis/redis.conf
+
